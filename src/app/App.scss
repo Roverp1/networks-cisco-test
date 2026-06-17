@@ -1,5 +1,7 @@
+@use '../shared/styles/tokens' as t;
+
 .container {
-  padding: 0 25px;
+  padding: 0 t.$md-sys-spacing-6;
   margin: 0 auto;
   max-width: 1600px;
 }

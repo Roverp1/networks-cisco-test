@@ -1,23 +1,100 @@
+@use "../../shared/styles/tokens" as t;
+
 .header {
-  background-color: #fff;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  position: absolute;
-
-  left: 25px;
-  right: 25px;
-
-  z-index: 100;
+  background-color: var(--md-sys-color-surface);
+  padding: t.$md-sys-spacing-4 0;
+  margin-bottom: t.$md-sys-spacing-4;
 
   &__list {
     display: flex;
-    gap: 10px;
+    gap: t.$md-sys-spacing-3;
+    flex-wrap: wrap;
 
     &-item {
-      font-size: 25px;
-      border: 8px double #666;
-      padding: 2px 5px;
+      @include t.typescale("headline-small");
+      border: t.$md-sys-spacing-2 double var(--md-sys-color-outline);
+      padding: t.$md-sys-spacing-1 t.$md-sys-spacing-2;
       white-space: nowrap;
+
+      transition-property: background-color, border-color;
+      @include t.effects("fast");
+
+      &:hover {
+        background-color: var(--md-sys-color-surface-container-high);
+      }
+
+      &--pw {
+        margin-left: auto;
+        background-color: var(--md-sys-color-tertiary-container);
+        border-color: var(--md-sys-color-tertiary);
+
+        a {
+          color: var(--md-sys-color-on-tertiary-container);
+          font-weight: 500;
+        }
+
+        &:hover {
+          background-color: var(--md-sys-color-tertiary);
+
+          a {
+            color: var(--md-sys-color-on-tertiary);
+          }
+        }
+      }
+
+      &--pip {
+        background-color: var(--md-sys-color-secondary-container);
+        border-color: var(--md-sys-color-secondary);
+
+        a {
+          color: var(--md-sys-color-on-secondary-container);
+          font-weight: 500;
+        }
+
+        &:hover {
+          background-color: var(--md-sys-color-secondary);
+
+          a {
+            color: var(--md-sys-color-on-secondary);
+          }
+        }
+      }
+
+      &--bdia {
+        background-color: var(--md-sys-color-primary-container);
+        border-color: var(--md-sys-color-primary);
+
+        a {
+          color: var(--md-sys-color-on-primary-container);
+          font-weight: 500;
+        }
+
+        &:hover {
+          background-color: var(--md-sys-color-primary);
+
+          a {
+            color: var(--md-sys-color-on-primary);
+          }
+        }
+      }
+
+      &--jee {
+        background-color: var(--md-sys-color-tertiary-container);
+        border-color: var(--md-sys-color-outline);
+
+        a {
+          color: var(--md-sys-color-tertiary);
+          font-weight: 500;
+        }
+
+        &:hover {
+          background-color: var(--md-sys-color-tertiary);
+
+          a {
+            color: var(--md-sys-color-tertiary);
+          }
+        }
+      }
     }
   }
 }

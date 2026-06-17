@@ -1,21 +1,40 @@
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 
 import Header from "../widgets/Header/Header";
 import SearchBar from "../widgets/SearchBar/SearchBar";
 import PageHome from "../pages/PageHome/PageHome";
+import PagePW from "../pages/PagePW/PagePW";
+import PagePIP from "../pages/PagePIP/PagePIP";
+import PageBDIA from "../pages/PageBDIA/PageBDIA";
+import PageJEE from "../pages/PageJEE/PageJEE";
 
 import "./App.scss";
 
 function App() {
   const [inputValue, setInputValue] = useState<string>("");
+  const location = useLocation();
 
-  console.log(inputValue);
+  const isPWRoute = location.pathname === "/pw";
+  const isPIPRoute = location.pathname === "/pip";
+  const isBDIARoute = location.pathname === "/bdia";
+  const isJEERoute = location.pathname === "/jee";
 
   return (
     <div className="container">
       <Header />
       <SearchBar setInputValue={setInputValue} />
-      <PageHome inputValue={inputValue} />
+      {isPWRoute ? (
+        <PagePW inputValue={inputValue} />
+      ) : isPIPRoute ? (
+        <PagePIP inputValue={inputValue} />
+      ) : isBDIARoute ? (
+        <PageBDIA inputValue={inputValue} />
+      ) : isJEERoute ? (
+        <PageJEE inputValue={inputValue} />
+      ) : (
+        <PageHome inputValue={inputValue} />
+      )}
     </div>
   );
 }

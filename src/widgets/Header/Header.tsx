@@ -15,6 +15,18 @@ const Header = () => {
         <li className="header__list-item">
           <Link to={"/jipp"}>JiPP</Link>
         </li>
+        <li className="header__list-item header__list-item--pw">
+          <Link to={"/pw"}>PW</Link>
+        </li>
+        <li className="header__list-item header__list-item--pip">
+          <Link to={"/pip"}>PIP</Link>
+        </li>
+        <li className="header__list-item header__list-item--bdia">
+          <Link to={"/bdia"}>BDIA</Link>
+        </li>
+        <li className="header__list-item header__list-item--jee">
+          <Link to={"/jee"}>JEE</Link>
+        </li>
       </ul>
     </header>
   );

@@ -1,0 +1,87 @@
+@use '../../shared/styles/tokens' as t;
+
+.page-bdia {
+  &__header {
+    text-align: center;
+    padding: t.$md-sys-spacing-8 0;
+    margin-bottom: t.$md-sys-spacing-6;
+    background: linear-gradient(
+      135deg,
+      var(--md-sys-color-secondary-container) 0%,
+      var(--md-sys-color-primary-container) 100%
+    );
+    border-radius: t.$md-sys-shape-corner-value-large;
+  }
+
+  &__title {
+    @include t.typescale('display-small');
+    color: var(--md-sys-color-on-secondary-container);
+    margin-bottom: t.$md-sys-spacing-2;
+    font-weight: 600;
+  }
+
+  &__subtitle {
+    @include t.typescale('title-medium');
+    color: var(--md-sys-color-on-secondary-container);
+    opacity: 0.8;
+  }
+
+  &__item {
+    padding: t.$md-sys-spacing-6 0;
+  }
+
+  &__question {
+    @include t.typescale('headline-medium');
+    color: var(--md-sys-color-on-surface);
+    margin-bottom: t.$md-sys-spacing-4;
+    display: flex;
+    gap: t.$md-sys-spacing-3;
+    align-items: flex-start;
+  }
+
+  &__question-number {
+    @include t.typescale('headline-medium');
+    color: var(--md-sys-color-secondary);
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  &__answer {
+    background-color: var(--md-sys-color-surface-container-high);
+    padding: t.$md-sys-spacing-4;
+    border-radius: t.$md-sys-shape-corner-value-medium;
+    border-left: t.$md-sys-spacing-1 solid var(--md-sys-color-secondary);
+
+    p {
+      @include t.typescale('body-large');
+      color: var(--md-sys-color-on-surface);
+      margin-bottom: t.$md-sys-spacing-3;
+      line-height: 1.6;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:empty {
+        margin-bottom: t.$md-sys-spacing-2;
+      }
+    }
+  }
+
+  &__divider {
+    margin: t.$md-sys-spacing-6 0;
+    border: none;
+    height: 1px;
+    background-color: var(--md-sys-color-outline-variant);
+  }
+
+  &__empty {
+    padding: t.$md-sys-spacing-16 0;
+    text-align: center;
+
+    p {
+      @include t.typescale('title-large');
+      color: var(--md-sys-color-on-surface-variant);
+    }
+  }
+}

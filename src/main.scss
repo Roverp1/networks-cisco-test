@@ -30,7 +30,7 @@ a:active {
 
 :focus-visible {
   outline: none;
-  box-shadow: 0 0 0 0.3rem rgba(107, 114, 128, 1);
+  box-shadow: 0 0 0 0.3rem var(--md-sys-color-outline);
   transition: box-shadow 0.2s ease-in-out;
 }
 
@@ -54,11 +54,12 @@ body {
 
   font-family: "grstk peta", sans-serif;
 
-  font-size: 62.5%;
+  font-size: 100%;
 }
 
 body {
-  font-size: 1.8rem;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 input,

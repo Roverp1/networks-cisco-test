@@ -1,29 +1,31 @@
+@use '../../../shared/styles/tokens' as t;
+
 .card-question {
-  padding: 40px 0;
+  padding: t.$md-sys-spacing-10 0;
 
   &__question {
-    font-size: 30px;
-    margin-bottom: 10px;
+    @include t.typescale('headline-large');
+    margin-bottom: t.$md-sys-spacing-3;
   }
 
   &__subtitle {
-    font-size: 18px;
+    @include t.typescale('body-large');
     font-style: italic;
-    color: #777;
-    margin-bottom: 10px;
+    color: var(--md-sys-color-on-surface-variant);
+    margin-bottom: t.$md-sys-spacing-3;
   }
 
   fieldset {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    margin-bottom: 20px;
+    gap: t.$md-sys-spacing-4;
+    margin-bottom: t.$md-sys-spacing-5;
   }
 
   &__option-wrapper {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: t.$md-sys-spacing-4;
 
     :hover {
       cursor: pointer;
@@ -31,11 +33,11 @@
 
     input {
       transform: scale(1.8);
-      accent-color: rgb(255, 0, 234);
+      accent-color: var(--md-sys-color-tertiary);
     }
 
     span {
-      font-size: 25px;
+      @include t.typescale('body-large');
     }
   }
 }

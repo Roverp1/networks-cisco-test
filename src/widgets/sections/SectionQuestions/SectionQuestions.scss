@@ -1,5 +1,7 @@
+@use '../../../shared/styles/tokens' as t;
+
 .section-questions {
-  padding-top: 90px;
+  padding-top: t.$md-sys-spacing-24;
 
   &__line {
     position: relative;
@@ -8,6 +10,6 @@
     width: 100vw;
 
     height: 1px;
-    background-color: #000;
+    background-color: var(--md-sys-color-outline-variant);
   }
 }

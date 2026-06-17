@@ -1,16 +1,25 @@
+@use '../../shared/styles/tokens' as t;
+
 .search-bar {
-  border: 2px solid #666;
-  // width: 100%;
-  height: 5vh;
-  font-size: 28px;
-  padding: 2px 15px;
+  width: 100%;
+  border: t.$md-sys-spacing-1 solid var(--md-sys-color-outline);
+  background-color: var(--md-sys-color-surface-container-high);
+  color: var(--md-sys-color-on-surface);
+  @include t.typescale('body-large');
+  padding: t.$md-sys-spacing-3 t.$md-sys-spacing-4;
+  border-radius: t.$md-sys-shape-corner-value-small;
+  margin-bottom: t.$md-sys-spacing-6;
 
-  position: absolute;
+  transition-property: border-color, background-color;
+  @include t.effects('fast');
 
-  left: 25px;
-  right: 25px;
+  &::placeholder {
+    color: var(--md-sys-color-on-surface-variant);
+  }
 
-  z-index: 100;
-
-  margin-top: 65px;
+  &:focus {
+    outline: none;
+    border-color: var(--md-sys-color-primary);
+    background-color: var(--md-sys-color-surface-container);
+  }
 }
