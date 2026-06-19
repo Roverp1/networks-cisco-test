@@ -27,6 +27,9 @@ const Header = () => {
         <li className="header__list-item header__list-item--jee">
           <Link to={"/jee"}>JEE</Link>
         </li>
+        <li className="header__list-item header__list-item--licence">
+          <Link to={"/licence"}>Licencje</Link>
+        </li>
       </ul>
     </header>
   );
