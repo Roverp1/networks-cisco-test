@@ -9,6 +9,7 @@ import PagePIP from "../pages/PagePIP/PagePIP";
 import PageBDIA from "../pages/PageBDIA/PageBDIA";
 import PageJEE from "../pages/PageJEE/PageJEE";
 import PageLicence from "../pages/PageLicence/PageLicence";
+import PageLicenceEn from "../pages/PageLicenceEn/PageLicenceEn";
 
 import "./App.scss";
 
@@ -21,6 +22,7 @@ function App() {
   const isBDIARoute = location.pathname === "/bdia";
   const isJEERoute = location.pathname === "/jee";
   const isLicenceRoute = location.pathname === "/licence";
+  const isLicenceEnRoute = location.pathname === "/licence-en";
 
   return (
     <div className="container">
@@ -36,6 +38,8 @@ function App() {
         <PageJEE inputValue={inputValue} />
       ) : isLicenceRoute ? (
         <PageLicence inputValue={inputValue} />
+      ) : isLicenceEnRoute ? (
+        <PageLicenceEn inputValue={inputValue} />
       ) : (
         <PageHome inputValue={inputValue} />
       )}

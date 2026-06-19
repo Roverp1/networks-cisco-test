@@ -113,6 +113,24 @@
           }
         }
       }
+
+      &--licence-en {
+        background-color: var(--md-sys-color-secondary-container);
+        border-color: var(--md-sys-color-outline);
+
+        a {
+          color: var(--md-sys-color-secondary);
+          font-weight: 500;
+        }
+
+        &:hover {
+          background-color: var(--md-sys-color-secondary);
+
+          a {
+            color: var(--md-sys-color-on-secondary);
+          }
+        }
+      }
     }
   }
 }

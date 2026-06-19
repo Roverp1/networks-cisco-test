@@ -30,6 +30,9 @@ const Header = () => {
         <li className="header__list-item header__list-item--licence">
           <Link to={"/licence"}>Licencje</Link>
         </li>
+        <li className="header__list-item header__list-item--licence-en">
+          <Link to={"/licence-en"}>Licences (EN)</Link>
+        </li>
       </ul>
     </header>
   );
