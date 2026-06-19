@@ -10,6 +10,11 @@
   border-radius: t.$md-sys-shape-corner-value-small;
   margin-bottom: t.$md-sys-spacing-6;
 
+  position: sticky;
+  top: t.$md-sys-spacing-4;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
   transition-property: border-color, background-color;
   @include t.effects('fast');
 
